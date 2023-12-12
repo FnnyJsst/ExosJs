@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Exercices Manipulation DOM</title>
+    <style>
+      body {
+        font-family: verdana;
+      }
+      #instruction {
+        text-align: center;
+        font-size: 16px;
+      }
+      #content {
+        width: 600px;
+        border: 1px solid black;
+        margin: 0 auto;
+        padding: 10px;
+      }
+      p {
+        font-size: 12px;
+      }
+      label {
+        font-size: 14px;
+        font-weight: bold;
+      }
+      span {
+        font-size: 12px;
+      }
+      fieldset {
+        background: #bdbdbd;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="instruction">
+      <strong>IMPORTANT : Il est interdit de modifier l'ossature HTML dans cette page!</strong><br />
+    </p>
+    <div id="content">
+      <form id="formulaire">
+        <div>
+          <label
+            >1 : Réalisez la multiplication de ces 2 nombres au survol de la
+            souris en utilisant la méthode document.getElementsByName (donc via
+            l'attribut "name" d'un élément HTML)</label
+          ><br /><br />
+          <label>Nombre 1 :</label>
+          <input type="radio" name="nombre1" value="1" checked /><label>1</label>
+          <input type="radio" name="nombre1" value="2" /><label>2</label>
+          <input type="radio" name="nombre1" value="3" /><label>3</label>
+          <input type="radio" name="nombre1" value="4" /><label>4</label>
+          <input type="radio" name="nombre1" value="5" /><label>5</label>
+          <br /><br />
+          <label>Nombre 2 :</label>
+          <select name="nombre2">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option></select
+          ><br /><br />
+          <input id="bouton1" value="Calculer" type="button" /><br /><br />
+        </div>
+        <div id="affichage_produit"></div>
+        <br />
+        <hr />
+        <br />
+        <div>
+          <label>2 : Affichez dans la zone de texte les pays déjà visités par
+            l'utilisateur en utilisant la méthode document.getElementsByTagName
+            (donc via les balises HTML)</label><br /><br />
+          <label>Cochez les pays que vous avez déjà visités :</label><br />
+          <input name="italie" type="checkbox" /><label>Italie</label><br />
+          <input name="allemagne" type="checkbox" /><label>Allemagne</label><br />
+          <input name="espagne" type="checkbox" /><label>Espagne</label><br />
+          <br /><br />
+          <div>
+            <input
+              value="Afficher les pays visités"
+              id="bouton2"
+              type="button"
+            />
+          </div>
+          <br />
+          <label>Vous avez visité les pays suivants:</label><br />
+          <input id="choix" size="40" type="text" />
+        </div>
+        <br />
+        <hr />
+        <br />
+        <div>
+          <label
+            >3 : Réalisez les actions mentionnées sur les différents
+            boutons.</label
+          ><br /><br />
+          <label>Liste des principales villes françaises :</label><br />
+          <ul id="liste">
+            <li>Paris</li>
+            <li>Marseille</li>
+            <li>Lyon</li>
+            <li>Strasbourg</li>
+            <li>Bordeaux</li>
+            <li>Toulouse</li>
+          </ul>
+          <input
+            id="gras"
+            value="Mettre la dernière ville de la liste en gras"
+            type="button"
+          /><br /><br />
+          <input
+            id="suppression"
+            value="Supprimer la deuxième ville de la liste"
+            type="button"
+          /><br /><br />
+          <input
+            id="longueur"
+            value="Afficher le nombre de ville total de la liste"
+            type="button"
+          /><br /><br />
+          <div id="longueur_liste"></div>
+          <input
+            id="changement"
+            value="Remplacer le nom de la troisième ville par  :"
+            type="button"
+          /><input id="remplacement" type="text" /><br /><br />
+        </div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
